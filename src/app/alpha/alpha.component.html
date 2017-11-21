@@ -1,3 +1,6 @@
-<p>
-  alpha works!
-</p>
+<h5>Alpha Component</h5>
+<form (submit)="onSubmit()">
+  <input type="text" name="newTask.title" [(ngModel)]="newTask.title"/>
+  <input type="text" name="newTask.description" [(ngModel)]="newTask.description"/>
+  <input type="submit">
+</form>

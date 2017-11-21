@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AlphaComponent } from './alpha/alpha.component';
 import { BetaComponent } from './beta/beta.component';
 
+import { TaskService } from './task.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,9 +17,11 @@ import { BetaComponent } from './beta/beta.component';
     BetaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
